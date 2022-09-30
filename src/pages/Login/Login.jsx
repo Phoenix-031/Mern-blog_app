@@ -11,7 +11,7 @@ const Login = () => {
   const userRef = useRef()
   const passwordRef = useRef()
 
-  const {dispatch,isFetching} = useContext(Context)
+  const {dispatch} = useContext(Context)
 
 
   const handleclick = async(e)=>{
