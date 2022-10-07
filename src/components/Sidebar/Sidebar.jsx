@@ -1,12 +1,26 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { useContext } from 'react'
+import { Context } from '../../context/Context'
 import './sidebar.css'
 
 const Sidebar = () => {
+    const {user} = useContext(Context)
+    console.log(user)
+
+
+    const profie = 'https://thawing-woodland-42890.herokuapp.com/images/'
+
+    // useEffect(()=>{
+
+    // },[])
+    
   return (
     <div className='sidebar'>
         <div className="sidebarItem">
             <span className="sidebarTitle">ABOUT ME</span>
             <div className="img-container">
+            
             <img src="https://i.pinimg.com/564x/b8/b9/28/b8b928e972a0adf39140a51872eccf36.jpg" alt="" />
             </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A placeat, tenetur architecto molestiae nihil .</p>
