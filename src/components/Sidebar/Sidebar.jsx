@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect } from 'react'
 import { useContext } from 'react'
 import { Context } from '../../context/Context'
 import './sidebar.css'
@@ -8,13 +7,6 @@ const Sidebar = () => {
     const {user} = useContext(Context)
     console.log(user)
 
-
-    const profie = 'https://thawing-woodland-42890.herokuapp.com/images/'
-
-    // useEffect(()=>{
-
-    // },[])
-    
   return (
     <div className='sidebar'>
         <div className="sidebarItem">

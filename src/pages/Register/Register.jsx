@@ -20,7 +20,7 @@ const Register = () => {
         username,email,password
       })
       if(register.data.success){
-        window.location.assign('/login')
+        window.location.replace('/login')
       }
     }catch(err){
       setErr(true)
