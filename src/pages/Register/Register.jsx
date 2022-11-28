@@ -16,7 +16,7 @@ const Register = () => {
     setErr(false)
 
     try{
-      const register = await axios.post('https://thawing-woodland-42890.herokuapp.com/api/auth/register',{
+      const register = await axios.post('https://blogappbackend-e4vv.onrender.com/api/auth/register',{
         username,email,password
       })
       if(register.data.success){

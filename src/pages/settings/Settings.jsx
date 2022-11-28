@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 const Settings = () => {
 
-    const profile = 'https://thawing-woodland-42890.herokuapp.com/images/'
+    const profile = 'https://blogappbackend-e4vv.onrender.com/images/'
     const {user,dispatch} = useContext(Context)
     const [username,setUsername] = useState(user.others.username)
     const [email,setEmail] = useState(user.others.email)
@@ -46,7 +46,7 @@ const Settings = () => {
             updatedUser.profilePic = filename
             try{
 
-                await axios.post('https://thawing-woodland-42890.herokuapp.com/api/upload',data)
+                await axios.post('https://blogappbackend-e4vv.onrender.com/api/upload',data)
                 
             }catch(err){
                 console.log(err)
@@ -56,7 +56,7 @@ const Settings = () => {
         try{
 
             // console.log(user.others._id)
-            const result =await axios.patch('https://thawing-woodland-42890.herokuapp.com/api/users/' + user.others._id,updatedUser)
+            const result =await axios.patch('https://blogappbackend-e4vv.onrender.com/api/users/' + user.others._id,updatedUser)
             console.log(result)
             dispatch({type:"UPDATE_SUCCESS",payload:result.data})
             if(result.data.success){
@@ -73,7 +73,7 @@ const Settings = () => {
     const delacc = async()=>{
         try{
 
-            await axios.delete('https://thawing-woodland-42890.herokuapp.com/api/users/' + user.others._id,{data:{
+            await axios.delete('https://blogappbackend-e4vv.onrender.com/api/users/' + user.others._id,{data:{
                 userId:user.others._id
             }})
             window.localStorage.clear()

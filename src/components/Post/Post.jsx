@@ -4,7 +4,7 @@ import './post.css'
 
 const Post = ({post}) => {
   
-  const imagefol = 'https://thawing-woodland-42890.herokuapp.com/images/'
+  const imagefol = 'https://blogappbackend-e4vv.onrender.com/images/'
   
   return (
     <div className='post'>

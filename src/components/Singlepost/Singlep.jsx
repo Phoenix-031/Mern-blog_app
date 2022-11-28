@@ -9,7 +9,7 @@ import { Context } from '../../context/Context'
 
 const Singlep = () => {
 
-    const imagefol = 'https://thawing-woodland-42890.herokuapp.com/images/'
+    const imagefol = 'https://blogappbackend-e4vv.onrender.com/images/'
     const {user} = useContext(Context)
 
     const location = useLocation()
@@ -24,7 +24,7 @@ const Singlep = () => {
     useEffect(()=>{
 
         const post = async () =>{
-            const postData = await axios.get(`https://thawing-woodland-42890.herokuapp.com/api/posts/${postId}`)
+            const postData = await axios.get(`https://blogappbackend-e4vv.onrender.com/api/posts/${postId}`)
             console.log(postData)
             setPostd(postData.data.post)
             setTitle(postData.data.post.title)
@@ -38,7 +38,7 @@ const Singlep = () => {
 
     const handleUpdate = async()=>{
         try{
-            await axios.put('https://thawing-woodland-42890.herokuapp.com/api/posts/'+postId,{
+            await axios.put('https://blogappbackend-e4vv.onrender.com/api/posts/'+postId,{
                 username:user.others.username, 
                 title:newtitle,
                 description:newdescription
@@ -54,7 +54,7 @@ const Singlep = () => {
 
     const handleDelete = async()=>{
         try{
-            const postdel = await axios.delete('https://thawing-woodland-42890.herokuapp.com/api/posts/' + postId,{data:{username:user.others.username}})
+            const postdel = await axios.delete('https://blogappbackend-e4vv.onrender.com/api/posts/' + postId,{data:{username:user.others.username}})
             window.location.replace('/')
             console.log(postdel)
         }catch(err){

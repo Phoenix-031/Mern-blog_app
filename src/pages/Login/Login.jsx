@@ -20,7 +20,7 @@ const Login = () => {
     dispatch({type:"LOGIN_START"})
     try{
 
-      const result = await axios.post('https://thawing-woodland-42890.herokuapp.com/api/auth/login',{
+      const result = await axios.post('https://blogappbackend-e4vv.onrender.com/api/auth/login',{
         username:userRef.current.value,
         password:passwordRef.current.value        
       })

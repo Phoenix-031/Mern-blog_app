@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(()=>{
 
       const fetchPosts = async ()=>{
-        const postResult = await axios.get('https://thawing-woodland-42890.herokuapp.com/api/posts' + search)
+        const postResult = await axios.get('https://blogappbackend-e4vv.onrender.com/api/posts' + search)
         setPosts(postResult.data.posts)
       }
 

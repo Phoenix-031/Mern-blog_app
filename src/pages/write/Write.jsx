@@ -31,7 +31,7 @@ const Write = () => {
             post.photo = filename
             try{
 
-                await axios.post('https://thawing-woodland-42890.herokuapp.com/api/upload',data)
+                await axios.post('https://blogappbackend-e4vv.onrender.com/api/upload',data)
                 
             }catch(err){
                 console.log(err)
@@ -40,7 +40,7 @@ const Write = () => {
 
         try{
 
-            const result =await axios.post('https://thawing-woodland-42890.herokuapp.com/api/posts',post)
+            const result =await axios.post('https://blogappbackend-e4vv.onrender.com/api/posts',post)
             console.log(result)
             window.location.replace(`/post/${result.data.savedpost._id}`)
             
